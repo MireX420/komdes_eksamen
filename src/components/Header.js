@@ -4,7 +4,7 @@ export default function Header({innledning, tittel, undertittel, bgImg}){
   return(
     <section id="header" className={bgImg}>
       <Link to="/">
-        <button id="back">Tilbake</button>
+        <button id="back"><i class="bi bi-arrow-left"></i></button>
       </Link>
       <p id="intro">{innledning}</p>
       <h1>{tittel}</h1>

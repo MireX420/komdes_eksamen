@@ -11,57 +11,76 @@ import energidrikk from "../photos/energidrikkMonster.jpg"
 
 export default function Caffeine(){
 
-  const [response, setResponse] = useState(["no answer", "no answer", "no answer", "no answer", "no answer", "no answer", "no answer"])
+  const [showAnswer, setShowAnswer] = useState(["no answer", "no answer", "no answer", "no answer", "no answer", "no answer", "no answer"])
+  //const [showAnswer, setShowAnswer] = useState(false)
+
 
   const drikker = [{
-    navn: "espresso",
+    navn: "Espresso",
     mengde: "0.4dl",
     koffein: "107mg",
     svaralternativer: ["33mg", "107mg", "65mg"],
+    besvarelse: "correct"
   },{
-    navn: "svart kaffe",
+    navn: "Svart kaffe",
     mengde: "2dl",
     koffein: "95mg",
     svaralternativer: ["55mg", "120mg", "95mg"],
+    besvarelse: "wrong"
   },{
-    navn: "cola",
+    navn: "Cola",
     mengde: "330 ml",
     koffein: "33mg",
     svaralternativer: ["33mg", "10mg", "52mg"],
+    besvarelse: "no answer"
   },{
-    navn: "svart te",
+    navn: "Svart te",
     mengde: "2dl",
     koffein: "44mg",
     svaralternativer: ["10mg", "0mg", "44mg"],
+    besvarelse: "no answer"
   },{
-    navn: "kakao",
+    navn: "Kakao",
     mengde: "2dl",
     koffein: "32mg",
     svaralternativer: ["32mg", "0mg", "60mg"],
+    besvarelse: "no answer"
   },{
-    navn: "pepsi max",
+    navn: "Pepsi max",
     mengde: "5dl", 
     koffein: "50mg",
     svaralternativer: ["50mg", "80mg", "60mg"],
+    besvarelse: "no answer"
   },{
-    navn: "energidrikk",
+    navn: "Energidrikk",
     mengde: "5dl",
     koffein: "160mg",
     svaralternativer: ["70mg", "110mg", "160mg"],
+    besvarelse: "wrong"
   }]
 
   const handleTestAnswer = (e, index) => {
-    e.preventDefault()
+    //e.preventDefault()
     if(e.currentTarget.value === drikker[index].koffein) {
       //drikker[index].besvart = "correct"
-      setResponse(...response, response[index] = "correct")
+      //setResponse(...response, response[index] = "correct")
+      drikker[index].besvarelse = "correct"
       console.log("you picked correct!")
-      console.log(response)
+      const updatedShowAnswer = [...showAnswer]
+      updatedShowAnswer[index] = "correct"
+
+      setShowAnswer(updatedShowAnswer)
+      //console.log(response)
     } else {
       //drikker[index].besvart = "wrong"
-      setResponse(...response, response[index] = "wrong")
+      //setResponse(...response, response[index] = "wrong")
+      drikker[index].besvarelse = "wrong"
       console.log("You picked wrong")
-      console.log(response)
+      const updatedShowAnswer = [...showAnswer]
+      updatedShowAnswer[index] = "wrong"
+
+      setShowAnswer(updatedShowAnswer)
+      //console.log(response)
     }
     //setToggleVisibility("hidden")
   }
@@ -90,6 +109,10 @@ export default function Caffeine(){
         at hele 43% i aldersgruppen 10-18 år drikker energidrikk ukentlig eller oftere. Et slikt jevnlig inntak 
         av befolkningen vil påvirke omsetningen til butikkene.
         </p>
+      </section>
+      <section>
+        {/* <div id="glass"></div>
+        <div id="kaffe"></div> */}
       </section>
       <section className="paragraph">
         <h3>Hvor mye selges?</h3>
@@ -135,11 +158,11 @@ export default function Caffeine(){
         <div className="row-div">
         {drikke.svaralternativer.map((svar) => (
         <>
-        {response[index] === "no answer"? <button className="choice" value={svar} onClick={(e) => handleTestAnswer(e, index)}>{svar}</button> : 
-        response[index] === "wrong" ? <p>Feil svar! {drikke} inneholder {drikke.koffein} koffein</p> :
-        response[index] === "correct" ? <p>Riktig! {drikke} inneholder {drikke.koffein} koffein</p>: null}
+        {showAnswer[index] === "no answer" && (<button className="choice" value={svar} onClick={(e) => handleTestAnswer(e, index)}>{svar}</button>) }
         </>
         ))}
+        {showAnswer[index] === "wrong" && (<p className="answer">Feil svar! {drikke.mengde} {drikke.navn} inneholder {drikke.koffein} koffein</p>)}
+        {showAnswer[index] === "correct" && (<p className="answer">Riktig! {drikke.mengde} {drikke.navn} inneholder {drikke.koffein} koffein</p>)}
         </div>
       </>
     ))}

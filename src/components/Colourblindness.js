@@ -1,5 +1,10 @@
 import Header from "./Header";
-import xy from "../photos/xy.png"
+import xx from "../photos/XX-dame.png"
+import xy from "../photos/XY-mann.png"
+import juletreFarge from "../photos/juletreFarge.jpg"
+import juletre from "../photos/juletre.jpg"
+import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
+
 
 export default function Colourblindness(){
 
@@ -29,7 +34,7 @@ export default function Colourblindness(){
         </p>
       </section>
       </section>
-      <section className="paragraph">
+      <section className="paragraph xx-xy">
         <h3>Flere fargesvake menn</h3>
         <p>
         Ifølge en artikkel fra <a href={illvitUrl} target="_blank" rel="noreferrer">illustrert vitenskap</a> er hele 8% av alle menn og under 1% av 
@@ -41,7 +46,17 @@ export default function Colourblindness(){
         eller fargeblinde. Menn derimot har kun ett X-kromosom og det er kun det ene som må ha feil for at de skal bli rammet. 
         Fargesvakhet er dermed enklere arvelig for menn og kan kanskje være årsaken til at flere menn er uentusiastiske når det kommer til julefeiringen
         </p>
-        <img id="xy-img" src={xy} alt="Kvinne og mann"/> 
+        <img id="xx-woman" src={xx} alt="XX dame"/>
+        <img id="xy-man" src={xy} alt="XY mann"/>
+      </section>
+      <section className="slider-section">
+        <h3>Se hvordan en med rød/grønn fargeblindhet ser fargene på juletreet</h3>
+        {/* Har installert React Compare Slider https://www.npmjs.com/package/react-compare-slider */}
+        <ReactCompareSlider 
+        itemOne={<ReactCompareSliderImage src={juletre} srcSet="" alt="julepynt"/>}
+        itemTwo={<ReactCompareSliderImage src={juletreFarge} srcSet="" alt="julepynt"/>}
+        style={{ width: '100%', height: '100%' }}
+        />
       </section>
       <section className="paragraph">
         <h3>Julens farger</h3>

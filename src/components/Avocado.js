@@ -8,10 +8,13 @@ import nAvoSak2 from "../photos/avosak_negativ/nSak2.png"
 import nAvoSak3 from "../photos/avosak_negativ/nSak3.png"
 import nAvoSak4 from "../photos/avosak_negativ/nSak4.png"
 import avo from "../photos/avo.jpg"
+import avoSign from "../photos/avokado-skilt.png"
+import avoStore from "../photos/avoStore.png"
 import avoTre from "../photos/avokadotre.jpg"
 import taco from "../photos/taco.jpg"
 import { useEffect, useRef, useState } from "react";
 import FadeInSection from "./FadeInSection";
+import ArticleTitle from "./ArticleTitle";
 
 
 export default function Avocado(){
@@ -46,8 +49,7 @@ export default function Avocado(){
       <Header bgImg="avo-header" innledning={innledning} tittel="Tacokveldens grønne gull" undertittel="Det grønne gullet"/>
       <section id="main-section">
         <div id="timeline"></div>
-        <div className="timeline-stop"></div>
-        {/* <h2 className="sub-title">På kjøkkenet</h2> */}
+        <div className="timeline-stop">Fredag 18:30</div>
         <div className="row-div"> 
           <section className={`paragraph`}>
             <h3>Tacokveld</h3>
@@ -59,10 +61,10 @@ export default function Avocado(){
           </section>
           <img className="story-img" src={taco} alt="taco"/>
         </div>
-        <div className="timeline-stop"></div>
+        <div className="timeline-stop">Fredag 16:10</div>
         <div className="row-div"> 
-          <img className="story-img" src={taco} alt="taco"/>
-          <section className="paragraph">
+          <img className="story-img" src={avoStore} alt="taco"/>
+          <section className="paragraph">        
             <h3>Butikken</h3>
             <p>
               Populariteten til avokadoen har økt betydelig de siste årene og 
@@ -74,7 +76,7 @@ export default function Avocado(){
               </p>
           </section>
         </div>
-        <div className="timeline-stop"></div>
+        <div className="timeline-stop">Fredag 07:20</div>
         <div className="row-div"> 
           <section className="paragraph">
             <h3>Import til butikken</h3>
@@ -87,11 +89,21 @@ export default function Avocado(){
           <img className="story-img" src={avo} alt="bilde1"/>
         </div>
         <section id="sticky-images">
-          {avoSaker.map((sak, i) => (
+          {/* {avoSaker.map((sak, i) => (
             <FadeInSection key={`fade-section-${i}`}>
             <img src={sak} alt={i < 4 ? "positiv avokadosak" : "negativ avokadosak"}/>
             </FadeInSection>
-          ))}
+          ))} */}
+          <FadeInSection>
+            <ArticleTitle description="Leger: - Derfor skal du spise mer avokado" title="Superfrukten du bør spise hver dag" intro="Glad i guacamole? Fortsett med det! Avokadoen er nærmest for en superfrukt å regne, viser ny forskning." articleClass="light"/>
+            <ArticleTitle title="Grønn, feit og sunn" intro="Hva er poenget med avokado? Jeg tror jeg kan ha funnet svaret." articleClass="light"/>
+            <ArticleTitle title="Avokado med nytt skall: Dobbel holdbarhet" intro="Denne uka lanseres avokadoer med mye lenger holdbarhet, takket være et nytt belegg" articleClass="light"/>
+            <ArticleTitle title="Avokado er verdens hotteste grønnsak. Slik lager du viestads avokadofavoritter" intro="- Verdens beste motargument til dem som sier at de ikke har tid til å lage skikkelig mat." articleClass="light"/>
+            <ArticleTitle title="Avokado-prisene går til værs" intro="Forbered deg på dyrere guacamole til fredags-tacoen." articleClass="dark"/>
+            <ArticleTitle description="Avokadoproduksjonen i Chile skader miljøet" title="Avokadoen fjernes fra danske butikker etter avsløringer: - Måtte ta affære" intro="- Positivt at forburkerne gjør valg med tanke på miljøeffekten av produktene de kjøper, sier norsk forsker." articleClass="dark"/>
+            <ArticleTitle title="Kokk fortviler: - Gjør meg kvalm" intro="Avokadoprodusenter i Mexico utsettes for utpressing og vold. Skog hogges ned ulovlig for å dyrke frukten, og miljøet tar stor skade. Nå trues næringen av konkurranse fra Sør-Amerika, miljøkampanjer og til og med boikott." articleClass="dark"/>
+            <ArticleTitle title="BLODIG AVOKADOKRIG" intro="I Mexico har narko-kartellene overtatt mye av avokado-produksjonen. Den økte, globale etterspørselen etter superfooden, gjør den verdt sin vekt i gull." articleClass="dark"/>
+          </FadeInSection>
         </section>
         <div className="timeline-stop"></div>
         <div className="row-div"> 
@@ -121,10 +133,11 @@ export default function Avocado(){
             de ofte kidnappet, torturert og ofte drept.
             </p>
           </section>
-          <img className="story-img" src={avo} alt="bilde1"/>
+          <img className="story-img" src={avoSign} alt="bilde1"/>
         </div>
         <div className="timeline-stop"></div>
         <div className="row-div"> 
+          <img className="story-img" src={avoTre} alt="avokadotre"/>
           <section className="paragraph">
             <h3>Plukker avokado</h3>
             <p>
@@ -136,11 +149,9 @@ export default function Avocado(){
             pusteproblemer og allergiske reaksjoner. 
             </p>
           </section>
-          <img className="story-img" src={avoTre} alt="avokadotre"/>
         </div>
         <div className="timeline-stop"></div>
         <div className="row-div"> 
-          <img className="story-img" src={avo} alt="bilde1"/>
           <section className="paragraph">
             <p>
              Avokadoen er klart en populær frukt i Norge og resten av verden. At den omtales som “det grønne gullet” viser at 
@@ -148,10 +159,8 @@ export default function Avocado(){
              å få tak i lønnsomheten. Her i Norge opplever ikke vi noe av dette direkte, men ved å spise avocado er vi indirekte 
              påvirkere til at dette foregår. 
             </p>
-            <p>
-
-            </p>
           </section>
+          <img className="story-img" src={avo} alt="bilde1"/>
         </div>
       </section>
     </body>

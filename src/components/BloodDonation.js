@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "./Header";
+import blodtyper from "../photos/blodtyper.png"
 
 export default function BloodDonation(){
 
@@ -141,10 +142,11 @@ export default function BloodDonation(){
         </p>
       </section>
       <section className="paragraph">
-        <h3>Må ha samme blodtype</h3>
+        <h3>Riktig blodtype</h3>
         <p>
-        Før blodet kan gis til pasienter og de som trenger det, må de ha samme blodtype. 
+        Før blodet kan gis til pasienter og de som trenger det, må de skaffe en blodtype som er kompatibel med pasienten. 
         </p>
+        <img id="blodtyper" src={blodtyper} alt="blodtyper"/>
       </section>
       <section className="paragraph">
         <h3>Forskjellige blodtyper</h3>
