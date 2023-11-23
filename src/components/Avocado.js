@@ -7,7 +7,8 @@ import nAvoSak1 from "../photos/avosak_negativ/nSak1.png"
 import nAvoSak2 from "../photos/avosak_negativ/nSak2.png"
 import nAvoSak3 from "../photos/avosak_negativ/nSak3.png"
 import nAvoSak4 from "../photos/avosak_negativ/nSak4.png"
-import avo from "../photos/avo.jpg"
+import mexicoKart from "../photos/mexico-kart.png"
+import avoStore2pk from "../photos/avoStore2pk.png"
 import avoSign from "../photos/avokado-skilt.png"
 import avoStore from "../photos/avoStore.png"
 import avoTre from "../photos/avokadotre.jpg"
@@ -24,17 +25,6 @@ export default function Avocado(){
   const innledning = "De siste tiårene har avokadoens popularitet skutt i været. Populariteten har ført til et hopp i pris på frukten, og for avokadobøndene gir dette en stor gevinst. Bak kulissene til avokadofeberen skjuler det seg en kriminell fortelling som kaster skygger over en bransje som er alt annet enn grønn."
 
   const avoSaker = [pAvoSak1, pAvoSak2, pAvoSak3, pAvoSak4, nAvoSak1, nAvoSak2, nAvoSak3, nAvoSak4]
-
-  // const avoSak1 = useRef()
-  // const avoSak2 = useRef()
-  // const avoSak3 = useRef()
-  // const avoSak4 = useRef()
-  // const avoSak5 = useRef()
-  // const avoSak6 = useRef()
-  // const avoSak7 = useRef()
-  // const avoSak8 = useRef()
-
-  // const refs = [avoSak1, avoSak2, avoSak3, avoSak4, avoSak5, avoSak6, avoSak7, avoSak8]
 
   const klimamyterUrl = "https://klimamyter.no/myter/bedre-for-klimaet-med-kortreist-ku-enn-langreist-avokado"
   const aftenpostenUrl = "https://www.aftenposteninnsikt.no/klimamilj/tr-bbel-det-gr-nne-gullet"
@@ -59,11 +49,15 @@ export default function Avocado(){
               av alle nordmenn spiser guacamole til tacoen og av disse lager 8 av 10 den selv med avokadoer fra butikkene.
             </p>
           </section>
+          <FadeInSection>
           <img className="story-img" src={taco} alt="taco"/>
+          </FadeInSection>
         </div>
         <div className="timeline-stop">Fredag 16:10</div>
         <div className="row-div"> 
-          <img className="story-img" src={avoStore} alt="taco"/>
+          <FadeInSection>
+          <img className="story-img" src={avoStore2pk} alt="taco"/>
+          </FadeInSection>
           <section className="paragraph">        
             <h3>Butikken</h3>
             <p>
@@ -86,7 +80,9 @@ export default function Avocado(){
             Ettersom Norge ikke produserer egne avokadoer må alt importeres fra andre land.
             </p>
           </section>
-          <img className="story-img" src={avo} alt="bilde1"/>
+          <FadeInSection>
+          <img className="story-img" src={avoStore} alt="bilde1"/>
+          </FadeInSection>
         </div>
         <section id="sticky-images">
           {/* {avoSaker.map((sak, i) => (
@@ -94,7 +90,6 @@ export default function Avocado(){
             <img src={sak} alt={i < 4 ? "positiv avokadosak" : "negativ avokadosak"}/>
             </FadeInSection>
           ))} */}
-          <FadeInSection>
             <ArticleTitle description="Leger: - Derfor skal du spise mer avokado" title="Superfrukten du bør spise hver dag" intro="Glad i guacamole? Fortsett med det! Avokadoen er nærmest for en superfrukt å regne, viser ny forskning." articleClass="light"/>
             <ArticleTitle title="Grønn, feit og sunn" intro="Hva er poenget med avokado? Jeg tror jeg kan ha funnet svaret." articleClass="light"/>
             <ArticleTitle title="Avokado med nytt skall: Dobbel holdbarhet" intro="Denne uka lanseres avokadoer med mye lenger holdbarhet, takket være et nytt belegg" articleClass="light"/>
@@ -103,11 +98,12 @@ export default function Avocado(){
             <ArticleTitle description="Avokadoproduksjonen i Chile skader miljøet" title="Avokadoen fjernes fra danske butikker etter avsløringer: - Måtte ta affære" intro="- Positivt at forburkerne gjør valg med tanke på miljøeffekten av produktene de kjøper, sier norsk forsker." articleClass="dark"/>
             <ArticleTitle title="Kokk fortviler: - Gjør meg kvalm" intro="Avokadoprodusenter i Mexico utsettes for utpressing og vold. Skog hogges ned ulovlig for å dyrke frukten, og miljøet tar stor skade. Nå trues næringen av konkurranse fra Sør-Amerika, miljøkampanjer og til og med boikott." articleClass="dark"/>
             <ArticleTitle title="BLODIG AVOKADOKRIG" intro="I Mexico har narko-kartellene overtatt mye av avokado-produksjonen. Den økte, globale etterspørselen etter superfooden, gjør den verdt sin vekt i gull." articleClass="dark"/>
-          </FadeInSection>
         </section>
         <div className="timeline-stop"></div>
         <div className="row-div"> 
-          <img className="story-img" src={avo} alt="bilde1"/>
+          <FadeInSection>
+          <img className="story-img" src={mexicoKart} alt="bilde1"/>
+          </FadeInSection>
           <section className="paragraph">
             <h3>Produksjonen</h3>
             <p>
@@ -133,11 +129,15 @@ export default function Avocado(){
             de ofte kidnappet, torturert og ofte drept.
             </p>
           </section>
+          <FadeInSection>
           <img className="story-img" src={avoSign} alt="bilde1"/>
+          </FadeInSection>
         </div>
         <div className="timeline-stop"></div>
         <div className="row-div"> 
+          <FadeInSection>
           <img className="story-img" src={avoTre} alt="avokadotre"/>
+          </FadeInSection>
           <section className="paragraph">
             <h3>Plukker avokado</h3>
             <p>
@@ -150,9 +150,9 @@ export default function Avocado(){
             </p>
           </section>
         </div>
-        <div className="timeline-stop"></div>
-        <div className="row-div"> 
-          <section className="paragraph">
+      </section>
+      <section id="ending">
+      <section className="paragraph">
             <p>
              Avokadoen er klart en populær frukt i Norge og resten av verden. At den omtales som “det grønne gullet” viser at 
              avokadoen er blitt en svært ettertraktet og verdifull frukt, og kriminelle gjenger tyr til drastiske tiltak for 
@@ -160,8 +160,6 @@ export default function Avocado(){
              påvirkere til at dette foregår. 
             </p>
           </section>
-          <img className="story-img" src={avo} alt="bilde1"/>
-        </div>
       </section>
     </body>
   )

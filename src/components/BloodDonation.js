@@ -1,6 +1,21 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./Header";
 import blodtyper from "../photos/blodtyper.png"
+import blod1 from "../photos/blod1.png"
+import blod3 from "../photos/blod3.png"
+import blod4pose from "../photos/blod4-barePose.png"
+import blod5 from "../photos/blod5.png"
+import blod6 from "../photos/blod6.png"
+import blod7 from "../photos/blod7.png"
+import blod8 from "../photos/blod8.png"
+//import hjul from "../photos/blodbil-hjul.png"
+import FadeInSection from "./FadeInSection";
+import PositionObserver from "./PositionObserver";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import "leaflet/dist/leaflet.css";
+import L from 'leaflet';
+import blodBankSkilt from '../photos/blodbank-skilt.png';
+import sykehusSkilt from '../photos/sykehusOstfold-skilt.png';
 
 export default function BloodDonation(){
 
@@ -16,6 +31,44 @@ export default function BloodDonation(){
   const rodekorsUrl2 = "https://www.rodekors.no/gi-blod/informasjon/for-under-og-etter/"
   const sykepleienUrl = "https://sykepleien.no/reportasje/2016/08/draper-av-liv"
   const rodekorsUrl3 = "https://www.rodekors.no/gi-blod/informasjon/om-blod/"
+
+  const startPosition = [59.367368228743324, 10.93603712236354]
+  const bbFredrikstad = [59.21224257365084, 10.927095271845227]
+  const kalnes = [59.31851027144979, 11.026951121544366]
+  const bbHalden = [59.12953866878332, 11.376182270970988]
+  const bbSarpsborg = [59.28590659095594, 11.109569724951148]
+  const bbMoss = [59.447268550874114, 10.696295197974832]
+  const bbAskim = [59.59393828911805, 11.162632736263193]
+
+  const [position, setPosition] = useState(startPosition)
+
+  const blodIkon = new L.Icon({
+    iconUrl: blodBankSkilt,
+    iconRetinaUrl: blodBankSkilt,
+    popupAnchor:  [-0, -0],
+    iconSize: [36,48],     
+});
+
+const sykehusIkon = new L.Icon({
+  iconUrl: sykehusSkilt,
+  iconRetinaUrl: sykehusSkilt,
+  popupAnchor:  [-0, -0],
+  iconSize: [36,48],     
+});
+
+  const mapRef = useRef()
+
+  const flyTo = () => {
+    if (position === startPosition){
+      setPosition(bbFredrikstad)
+      console.log(position)
+      mapRef.current.flyTo(bbFredrikstad, 15)
+    } else if (position === bbFredrikstad){
+      setPosition(kalnes)
+      mapRef.current.flyTo(kalnes, 15)
+    }
+    console.log(bbFredrikstad)
+  }
 
   return(
     <body id="blood-donation-body">
@@ -40,18 +93,40 @@ export default function BloodDonation(){
       </ul>
     </aside>
     <section id="blood-section">
-      <section className="paragraph">
+      <section className="paragraph gap">
         <p>
           ...
         </p>
       </section>
-      <section className="paragraph">
+      <FadeInSection>
+      <section id="map-section">
+      <MapContainer id="map" ref={mapRef} center={position} zoom={10} scrollWheelZoom={false}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker icon={blodIkon} position={bbFredrikstad}> </Marker>
+        <Marker icon={blodIkon} position={bbHalden}> </Marker>
+        <Marker icon={blodIkon} position={bbSarpsborg}> </Marker>
+        <Marker icon={blodIkon} position={bbMoss}> </Marker>
+        <Marker icon={blodIkon} position={bbAskim}> </Marker>
+        <Marker icon={sykehusIkon} position={kalnes}><Popup>Sykehuset Østfold Kalnes</Popup></Marker>
+      </MapContainer>
+        <PositionObserver flyTo={flyTo}>
+          <article></article>
+        </PositionObserver>
+        <PositionObserver flyTo={flyTo}>
+          <article></article>  
+        </PositionObserver>
+      </section>
+      </FadeInSection>
+      <section className="paragraph gap">
         <p>
         Blodgivningen i Norge foregår på ulike blodbanker, både på sykehusene, men også i egne bygg utenfor. I Østfold er disse 
         blodbankene i Fredrikstad, Sarpsborg, Moss, Indre Østfold og Halden og alle disse sender blod til Sykehuset i Østfold, på Kalnes. 
         </p>
       </section>
-      <section className="paragraph">
+      <section className="paragraph gap">
         <h3>Før blodgivningen</h3>
         <p>
         Før blodgivningen er det en nøye vurdering av hver giver før blodet kan tappes. Dette er for å sjekke at blodet er bra nok for 
@@ -65,6 +140,7 @@ export default function BloodDonation(){
         seks månedene. 
         </p>
       </section>
+      <img className="blod-bilde gap" src={blod1} alt="illustrasjon av blodoverføring"/>
       <section className="paragraph">
         <h3>Hvordan foregår blodgivning</h3>
         <p>
@@ -79,7 +155,7 @@ export default function BloodDonation(){
         kontakter deg når du kan gi blod igjen. 
         </p>
       </section>
-      <section className="paragraph">
+      <section className="paragraph gap">
         <h3>Virustesting av blodet</h3>
         <p>
         Ved hver blodgivning vil det tas smitteprøver for virus av blodet for å undersøke om det er en risiko for smitteoverføring 
@@ -91,6 +167,9 @@ export default function BloodDonation(){
         overføres de til et annet lager som inneholder blod klart for sending til Sykehuset i Østfold. 
         </p>
       </section>
+      <div className="img-container bil">
+        {/* <img className="blod-bilde" src={hjul} alt="illustrasjon av blodoverføring"/> */}
+      </div>
       <section className="paragraph">
         <h3>Sendingen av blodet</h3>
         <p>
@@ -98,12 +177,16 @@ export default function BloodDonation(){
         sykehusets egne biler for frakting av blodet.  
         </p>
       </section>
+      <img className="blod-bilde" src={blod3} alt="illustrasjon av blodoverføring"/>
       <section className="paragraph">
         <h3>Hvile</h3>
         <p>
         Når blodet ankommer sykehuset tar de imot blodet før det må hvile i en time på et lager før det behandles videre.
         </p>
       </section>
+      <div className="img-container pose">
+        <img id="blod-pose" className="blod-bilde" src={blod4pose} alt="illustrasjon av blodoverføring"/>
+      </div>
       <section className="paragraph">
         <h3>Sentrifugering</h3>
         <p>
@@ -113,6 +196,7 @@ export default function BloodDonation(){
         og plasmaen øverst. Etter en slik prosess vil dermed ikke blodet kun være rødt, men bestå av tre farger.
         </p>
       </section>
+      <img className="blod-bilde" src={blod5} alt="illustrasjon av blodoverføring"/>
       <section className="paragraph">
         <h3>Filtrering av blodet</h3>
         <p>
@@ -124,6 +208,7 @@ export default function BloodDonation(){
         ifølge <a href={rodekorsUrl3} target="_blank" rel="noreferrer">Røde Kors</a> kan bære på virus som kan skade mottakeren av blodet. 
         </p>
       </section>
+      <img className="blod-bilde" src={blod6} alt="illustrasjon av blodoverføring"/>
       <section className="paragraph">
         <h3>Lagring</h3>
         <p>
@@ -132,8 +217,8 @@ export default function BloodDonation(){
         dermed inn i kjøleskap på 4 grader, mens plasmaen må fryses fort.
         </p>
       </section>
-      <section className="paragraph">
-        <h3>Hva gjøred med de ulike delene?</h3>
+      <section className="paragraph gap">
+        <h3>Hva gjøres med de ulike delene?</h3>
         <p>
         Blodbanken i Fredrikstad forteller at plasmaen sendes videre til Østerrike for videre sortering, mens blodplater og de røde 
         blodcellene er det som gis til personer som trenger det på sykehuset. Pasienter som har mistet mye blod får røde blodceller, 
@@ -141,32 +226,34 @@ export default function BloodDonation(){
         sier <a href={rodekorsUrl3} target="_blank" rel="noreferrer">Røde Kors</a> i en artikkel om blodet.
         </p>
       </section>
-      <section className="paragraph">
+      <section className="paragraph gap">
         <h3>Riktig blodtype</h3>
         <p>
         Før blodet kan gis til pasienter og de som trenger det, må de skaffe en blodtype som er kompatibel med pasienten. 
         </p>
         <img id="blodtyper" src={blodtyper} alt="blodtyper"/>
       </section>
+      <img className="blod-bilde" src={blod7} alt="illustrasjon av blodoverføring"/>
       <section className="paragraph">
         <h3>Forskjellige blodtyper</h3>
         <p>
           ...
         </p>
       </section>
-      <section className="paragraph">
-        <h3>Hvem som får gi blod</h3>
+      <section className="paragraph gap">
+        <h3>Hvem som får blod</h3>
         <p>
           ...
         </p>
       </section>
-      <section className="paragraph">
+      <img className="blod-bilde" src={blod8} alt="illustrasjon av blodoverføring"/>
+      <section className="paragraph gap">
         <h3>Én pose kan redde 3 liv</h3>
         <p>
           ...
         </p>
       </section>
-      <section className="paragraph">
+      <section className="paragraph gap">
         <p>
           Avslutning...
         </p>

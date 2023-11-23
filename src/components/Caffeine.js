@@ -7,7 +7,8 @@ import svartTe from "../photos/svartTe.jpg"
 import kakao from "../photos/kakao.jpg"
 import pepsiMax from "../photos/pepsiMax.jpg"
 import energidrikk from "../photos/energidrikkMonster.jpg"
-
+import energidrikkHylle from "../photos/energidrikkHylle.jpg"
+import FadeInSection from "./FadeInSection";
 
 export default function Caffeine(){
 
@@ -98,22 +99,24 @@ export default function Caffeine(){
     <body id="caffeine-body">
     <Header bgImg="caffeine-header" innledning={innledning} tittel="Dette skjuler seg i det du drikker"/>
     <section id="main-section">
-      <section className="paragraph">
-        <h3>Økning i salg av energidrikk</h3>
-        <p>
-        De siste årene har det vært stor økning i omsetningen av energidrikk i Norge. Dette tyder på at enda flere drikker 
-        energidrikk i dag og at tallet øker stadig. Det er spesielt blant unge at det er blitt mer populært å drikke energidrikk. 
-        </p>
-        <p>
-        Dette viser en undersøkelse fra <a href={fhiUrl1} target="_blank" rel="noreferrer">Norstat</a> fra 2021, som kom fram til 
-        at hele 43% i aldersgruppen 10-18 år drikker energidrikk ukentlig eller oftere. Et slikt jevnlig inntak 
-        av befolkningen vil påvirke omsetningen til butikkene.
-        </p>
-      </section>
+      <FadeInSection>
+        <section className="paragraph">
+          <h3>Økning i salg av energidrikk</h3>
+          <p>
+          De siste årene har det vært stor økning i omsetningen av energidrikk i Norge. Dette tyder på at enda flere drikker 
+          energidrikk i dag og at tallet øker stadig. Det er spesielt blant unge at det er blitt mer populært å drikke energidrikk. 
+          </p>
+          <p>
+          Dette viser en undersøkelse fra <a href={fhiUrl1} target="_blank" rel="noreferrer">Norstat</a> fra 2021, som kom fram til 
+          at hele 43% i aldersgruppen 10-18 år drikker energidrikk ukentlig eller oftere. Et slikt jevnlig inntak 
+          av befolkningen vil påvirke omsetningen til butikkene.
+          </p>
+        </section>
+      </FadeInSection>
       <section>
-        {/* <div id="glass"></div>
-        <div id="kaffe"></div> */}
       </section>
+      {/* <img className="bg-img" src={energidrikkHylle} alt="Hylle med energidrikk"/> */}
+      <FadeInSection>
       <section className="paragraph">
         <h3>Hvor mye selges?</h3>
         <p>
@@ -122,6 +125,8 @@ export default function Caffeine(){
         millioner liter energidrikk. Det er en total økning på 32 millioner liter på 3 år, og det er ikke en positiv økning.
         </p>
       </section>
+      </FadeInSection>
+      <FadeInSection>
       <section className="paragraph">
         <h3>Energidrikkens påvirkning på kroppen</h3>
         <p>
@@ -140,6 +145,8 @@ export default function Caffeine(){
         kroppsvekt og tåler mindre koffein enn voksne.
         </p>
       </section>
+      </FadeInSection>
+      <FadeInSection>
       <section className="paragraph">
         <h3>Visste du også at disse varene inneholder koffein?</h3>
         <p>
@@ -149,11 +156,12 @@ export default function Caffeine(){
         og pepsi max også en del koffein. Til og med koffeinfri kaffe inneholder litt koffein.
         </p>
       </section>
+      </FadeInSection>
     <section id="caffeine-test">
       <h3>Test deg på hvor mye koffein ulike produkter inneholder</h3>
     {drikker.map((drikke, index) => (
       <>
-        <p>{drikke.navn} {drikke.mengde}</p>
+        <p >{drikke.navn} {drikke.mengde}</p>
         <img className="quiz-img" src={quizBilder[index]} alt={`"${quizBilder[index]}"`}/>
         <div className="row-div">
         {drikke.svaralternativer.map((svar) => (
@@ -167,12 +175,14 @@ export default function Caffeine(){
       </>
     ))}
     </section>
+    <FadeInSection>
     <section className="paragraph">
       <p>
       Et høyt koffeininntak har positive effekter for flere, men også mange negative på kroppen. Og selv om man ikke drikker 
       mye energidrikker eller kaffe, kan man likevel få i seg koffein fra diverse andre produkter.
       </p>
     </section>
+    </FadeInSection>
     </section>
     </body>
   )
