@@ -36,15 +36,15 @@ export default function Avocado(){
 
   return(
     <body id="avocado-body">
-      <Header bgImg="avo-header" innledning={innledning} tittel="Tacokveldens grønne gull" undertittel="Det grønne gullet"/>
+      <Header bgImg="avo-header" innledning={innledning} tittel="Den mørke baksiden til tacokveldens grønne gull" undertittel="Det grønne gullet"/>
       <section id="main-section">
         <div id="timeline"></div>
         <div className="timeline-stop">Fredag 18:30</div>
-        <div className="row-div"> 
+        <div className="row-div reverse"> 
           <section className={`paragraph`}>
             <h3>Tacokveld</h3>
             <p>
-              En tacokveld i uken er veldig normalt for de fleste nordmenn, og tilbehør er spesielt viktig. 
+              En tacokveld i uken er veldig normalt for mange nordmenn, og tilbehør er spesielt viktig. 
               Ifølge <a href={ntbUrl} target="_blank" rel="noreferrer">Opplysningskontoret</a> sies det at halvparten 
               av alle nordmenn spiser guacamole til tacoen og av disse lager 8 av 10 den selv med avokadoer fra butikkene.
             </p>
@@ -71,7 +71,7 @@ export default function Avocado(){
           </section>
         </div>
         <div className="timeline-stop">Fredag 07:20</div>
-        <div className="row-div"> 
+        <div className="row-div reverse"> 
           <section className="paragraph">
             <h3>Import til butikken</h3>
             <p>
@@ -118,12 +118,15 @@ export default function Avocado(){
           </section>
         </div>
         <div className="timeline-stop"></div>
-        <div className="row-div"> 
+        <div className="row-div reverse"> 
           <section className="paragraph">
             <h3>Kriminaliteten</h3>
             <p>
             Den enorme interessen for avokado har skapt en svært lønnsom virksomhet i Mexico, men den har også bidratt til å gjøre 
-            det “grønne gullet” til et mål for narkokarteller som ønsker å kontrollere handelen. I mange av avokadoproduksjonene i 
+            det “grønne gullet” til et mål for narkokarteller som ønsker å kontrollere handelen. 
+            </p>
+            <p>
+            I mange av avokadoproduksjonene i 
             Michoacán har flere slike karteller tatt over, og mange av avokado-bøndene sliter med tyveri fra kriminelle gjenger. 
             En artikkel fra <a href={nprUrl} target="_blank" rel="noreferrer">NPR</a> skriver at kartellene truer med utpressingsgebyrer og om bøndene ikke vil eller kan betale, blir 
             de ofte kidnappet, torturert og ofte drept.
@@ -143,7 +146,10 @@ export default function Avocado(){
             <p>
             Det er ikke bare stor kriminalitet rundt hvem som styrer produksjonen, men det påvirker også miljøet negativt. 
             Avokadoplantene krever mye vann og for å produsere en kilo behøves det 1981 liter med vann, 
-            ifølge <a href={klimamyterUrl} target="_blank" rel="noreferrer">Klimamyter</a>. Mye skog blir også ulovlig fjernet 
+            ifølge <a href={klimamyterUrl} target="_blank" rel="noreferrer">Klimamyter</a>. 
+            </p>
+            <p>
+            Mye skog blir også ulovlig fjernet 
             for å få plass til de mange plantasjene. Bruken av sprøytemidler påvirker ikke bare miljøet, men også helsen til de som 
             jobber på plantasjene. En artikkel i <a href={aftenpostenUrl} target="_blank" rel="noreferrer">Aftenposten innsikt</a> forklarer at midlene sprer seg i luften og flere opplever 
             pusteproblemer og allergiske reaksjoner. 

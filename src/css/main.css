@@ -17,7 +17,6 @@ a {
 }
 
 .visible {
-  display: block;
   opacity: 1 !important;
 }
 
@@ -69,12 +68,22 @@ a {
   box-shadow: 0px 0px 10px rgb(184, 184, 184);
   overflow: hidden;
 }
+#navpage #article-section .article-card #tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+#navpage #article-section .article-card #tags p {
+  margin: 0;
+}
 #navpage #article-section .article-card img {
   background-color: rgb(43, 43, 43);
   max-width: 600px;
   width: 100%;
   height: 200px;
   object-fit: cover;
+}
+#navpage #article-section .article-card p {
+  margin-top: 2rem;
 }
 #navpage #article-section .article-card .text-section {
   margin: 2rem;
@@ -84,9 +93,7 @@ a {
 }
 #navpage #article-section .article-card .text-section h2 {
   font-size: 2rem;
-}
-#navpage #article-section .article-card .text-section p {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 #navpage #article-section .article-card:hover {
   transition: ease-in 0.5s;
@@ -135,7 +142,7 @@ a {
 }
 
 #avocado-body {
-  background: linear-gradient(rgb(107, 184, 98), rgb(11, 24, 12));
+  background: linear-gradient(rgb(87, 156, 79), rgb(11, 24, 12));
 }
 #avocado-body .avo-header {
   background-image: url("../photos/avo.jpg");
@@ -191,8 +198,8 @@ a {
 #avocado-body #main-section .paragraph {
   max-width: 500px;
   color: rgb(216, 255, 216);
-  margin-right: 4rem;
-  margin-left: 4rem;
+  margin-right: 12rem;
+  margin-left: 12rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -279,8 +286,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40vh 0vh 30vh 0vh;
-  background: linear-gradient(#132513, #0b180c);
+  padding: 40vh 0vh 35vh 0vh;
+  background-color: rgb(8, 22, 8);
 }
 #ending .paragraph {
   color: #d8ffd8;
@@ -362,7 +369,10 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(251, 208, 215);
+  background-color: rgb(255, 238, 241);
+}
+#blood-donation-body:last-child {
+  padding-bottom: 10vh;
 }
 #blood-donation-body .blood-donation-header {
   background-image: url("../photos/blodceller.jpg");
@@ -371,7 +381,7 @@ h1 {
   padding-bottom: 30vh;
 }
 #blood-donation-body .blood-donation-header #intro {
-  background-color: rgba(209, 102, 102, 0.7647058824);
+  background-color: rgba(151, 61, 61, 0.913);
   color: rgb(255, 226, 226);
 }
 #blood-donation-body .blood-donation-header h1 {
@@ -423,7 +433,7 @@ h1 {
 }
 #blood-donation-body #vocab li {
   margin: 1rem;
-  padding-right: 80px;
+  padding-right: 20px;
 }
 #blood-donation-body #vocab button {
   position: absolute;
@@ -446,18 +456,28 @@ h1 {
   align-items: center;
 }
 #blood-donation-body #blood-section #map-section {
+  position: relative;
   margin-top: 20vh;
+  height: 250vh;
 }
 #blood-donation-body #blood-section #map-section article {
-  height: 300px;
-  width: 400px;
+  width: 30vw;
   background-color: white;
-  margin-top: 40vh;
-  margin-bottom: 50vh;
+  margin-top: 30vh;
+  margin-bottom: 90vh;
   margin-left: 1rem;
   z-index: 10;
   position: relative;
   border-radius: 1rem;
+  padding: 1rem;
+}
+#blood-donation-body #blood-section #map-section article .map-img {
+  width: 100%;
+  object-fit: contain;
+}
+#blood-donation-body #blood-section #map-section article .imgtxt {
+  font-size: 0.9rem;
+  color: rgb(83, 83, 83);
 }
 #blood-donation-body #blood-section #map-section #map {
   position: sticky;
@@ -510,17 +530,67 @@ h1 {
   width: 80vw;
 }
 #blood-donation-body #blood-section .gap {
-  margin-top: 3rem;
+  margin-top: 10vh;
+}
+#blood-donation-body #blood-section .gap-under {
+  margin-bottom: 10vh;
 }
 #blood-donation-body #blood-section .paragraph {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #5f2727;
+  background-color: #f5e4e4;
+  color: black;
+  border: 8px solid #811520;
+}
+#blood-donation-body #blood-section .paragraph #stats {
+  max-width: 85vw;
+  width: 500px;
+  align-self: center;
+}
+#blood-donation-body #blood-section .paragraph .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#blood-donation-body #blood-section .paragraph .row p {
+  padding: 1rem 1rem 1rem 0;
+}
+#blood-donation-body #blood-section .paragraph .small-img {
+  width: 250px;
+  height: fit-content;
+  border-radius: 5px;
+}
+#blood-donation-body #blood-section .paragraph .medium-img {
+  width: 300px;
+  height: fit-content;
+  border-radius: 5px;
+}
+#blood-donation-body #blood-section .paragraph.story {
+  border: 8px solid rgb(34, 8, 8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#blood-donation-body #blood-section .paragraph.story div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#blood-donation-body #blood-section .paragraph.story div p {
+  padding: 5rem;
 }
 #blood-donation-body #blood-section .paragraph a {
-  color: rgb(255, 129, 129);
+  color: #811520;
   text-decoration: underline;
+}
+#blood-donation-body #blood-section .paragraph video {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+}
+#blood-donation-body #blood-section .paragraph img {
+  border-radius: 10px;
 }
 #blood-donation-body #blood-section #blodtyper {
   width: 300px;
@@ -543,7 +613,7 @@ h1 {
   color: white;
 }
 #caffeine-body .caffeine-header #back:hover {
-  background-color: #dc8181;
+  background-color: #d03333;
 }
 #caffeine-body #main-section {
   background-color: rgb(255, 242, 235);
@@ -552,13 +622,32 @@ h1 {
   align-items: center;
   position: relative;
 }
+#caffeine-body #main-section .txt-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#caffeine-body #main-section .txt-img .paragraph {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+}
+#caffeine-body #main-section .txt-img .paragraph .pg-img {
+  border: 2px solid #1d1d1d;
+  border-radius: 10px;
+}
 #caffeine-body #main-section .paragraph {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   color: black;
   margin: 40vh 0vh 20vh 0vh;
-  background-color: rgb(255, 242, 235);
+  background-color: rgb(255, 252, 250);
+  box-shadow: 0px 0px 30px rgb(117, 81, 58);
+}
+#caffeine-body #main-section .paragraph:last-child {
+  margin-bottom: 40vh;
 }
 #caffeine-body #main-section .paragraph a {
   color: rgb(209, 21, 0);
@@ -568,13 +657,22 @@ h1 {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  position: absolute;
-  top: 0px;
+}
+#caffeine-body h3 {
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+}
+#caffeine-body .small-img {
+  object-fit: contain;
+  width: 30vw;
+  margin: 0vh 0vh 30vh 0vh;
 }
 #caffeine-body #caffeine-test {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
 }
 #caffeine-body #caffeine-test h3 {
   font-size: 2rem;
@@ -613,7 +711,7 @@ h1 {
   background-color: rgb(255, 255, 255);
 }
 #colourblindness-body .colourblindness-header {
-  background-image: url("../photos/julepynt.jpg");
+  background-image: url("../photos/julekule.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left 0px;
@@ -634,12 +732,31 @@ h1 {
   color: black;
 }
 #colourblindness-body #main-section {
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 15vh;
+}
+#colourblindness-body #main-section .txt-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100vw;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+#colourblindness-body #main-section .txt-img .paragraph {
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+}
+#colourblindness-body #main-section .txt-img .bg-img {
+  width: 100%;
 }
 #colourblindness-body #main-section .window-section {
-  background-image: url("../photos/pakke.jpg");
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -654,6 +771,10 @@ h1 {
   object-fit: cover;
   overflow: hidden;
   flex-grow: 1;
+  margin-top: 20vh;
+}
+#colourblindness-body #main-section .slider-section h3 {
+  padding: 1rem;
 }
 #colourblindness-body #main-section .slider-section img {
   height: 100%;
@@ -666,13 +787,17 @@ h1 {
   flex-direction: column;
   gap: 1rem;
   color: black;
-  margin: 40vh 0rem 30vh 0rem;
+  margin: 30vh 0vh 30vh 0vh;
   background-color: rgba(255, 255, 255, 0.877);
   border-radius: 1rem;
+  box-shadow: 0px 0px 30px rgba(226, 191, 191, 0.608);
 }
 #colourblindness-body #main-section .paragraph a {
   color: rgb(182, 19, 19);
   text-decoration: underline;
+}
+#colourblindness-body #main-section .paragraph video {
+  align-self: center;
 }
 #colourblindness-body #main-section .xx-xy {
   position: relative;
@@ -681,11 +806,13 @@ h1 {
   width: 160px;
   position: absolute;
   left: -15vw;
+  top: 50px;
 }
 #colourblindness-body #main-section #xy-man {
   width: 130px;
   position: absolute;
   right: -15vw;
+  top: 50px;
 }
 #colourblindness-body #main-section .row-div {
   display: flex;
@@ -695,6 +822,65 @@ h1 {
 #colourblindness-body #main-section #xy-img {
   max-width: 400px;
   width: 100%;
+}
+#colourblindness-body #main-section .carousel {
+  position: relative;
+  margin: 20vh 0 20vh 0;
+}
+#colourblindness-body #main-section .carousel h3 {
+  padding: 1rem;
+}
+#colourblindness-body #main-section .carousel img {
+  height: 80vh;
+  border-radius: 10px;
+  position: relative;
+}
+#colourblindness-body #main-section .carousel .slide_direction {
+  display: flex;
+  justify-content: space-between;
+}
+#colourblindness-body #main-section .carousel .left,
+#colourblindness-body #main-section .carousel .right {
+  background-color: rgba(219, 122, 122, 0.6549019608);
+  color: #fff;
+  padding: 13px 8px 8px 13px;
+  margin: 0 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 10px;
+  height: 25px;
+  width: 25px;
+}
+#colourblindness-body #main-section .carousel .left:hover,
+#colourblindness-body #main-section .carousel .right:hover {
+  background-color: rgba(255, 255, 255, 0.651);
+  cursor: pointer;
+}
+#colourblindness-body #main-section .carousel .left {
+  left: 0;
+}
+#colourblindness-body #main-section .carousel .right {
+  right: 0;
+}
+#colourblindness-body #main-section .carousel .indicator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#colourblindness-body #main-section .carousel .dot {
+  background-color: #333;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+#colourblindness-body #main-section .carousel .dot:hover {
+  cursor: pointer;
+}
+#colourblindness-body #main-section .carousel .dot.active {
+  background-color: #bc3434;
 }
 
 @media (max-width: 1200px) {
@@ -711,15 +897,37 @@ h1 {
   #caffeine-body #caffeine-test .quiz-img {
     width: 60vw;
   }
+  #caffeine-body .small-img {
+    width: 50vw;
+  }
+  #colourblindness-body #main-section .xx-xy {
+    display: flex;
+    align-items: center;
+  }
+  #colourblindness-body #main-section .xx-xy h3 {
+    align-self: flex-start;
+  }
+  #colourblindness-body #main-section .row-div {
+    width: 100%;
+  }
   #colourblindness-body #main-section #xx-woman {
     width: 120px;
     position: relative;
     left: 0px;
+    top: 0px;
   }
   #colourblindness-body #main-section #xy-man {
     width: 97px;
     position: relative;
     right: 0px;
+    top: 0px;
+  }
+  #colourblindness-body #main-section .txt-img {
+    height: 100vh;
+    width: auto;
+  }
+  #colourblindness-body #main-section .txt-img .bg-img {
+    width: auto;
   }
   #avocado-body #main-section .row-div {
     margin: 0rem 0.2rem 0rem 0.2rem;
@@ -752,11 +960,11 @@ h1 {
   #header h1 {
     font-size: 3rem;
   }
-  #header #back {
-    font-size: 1.2rem;
-  }
   #avocado-body #main-section .row-div {
     flex-direction: column-reverse;
+  }
+  #avocado-body #main-section .reverse {
+    flex-direction: column;
   }
   #avocado-body #main-section .story-img {
     max-width: 100vw;
@@ -773,7 +981,8 @@ h1 {
     width: 100vw;
     margin: 0rem;
     font-size: 2rem;
-    padding-left: 0rem;
+    padding-left: 4rem;
+    text-align: start;
   }
   #blood-donation-body #blood-section .img-container {
     height: 80vh;
@@ -805,7 +1014,7 @@ h1 {
     gap: 1rem;
   }
   #navpage #article-section .article-card {
-    width: 90vw;
+    width: 80vw;
   }
   #header #back {
     top: unset;
@@ -813,6 +1022,7 @@ h1 {
     left: 10px;
     padding: 1rem;
     border-radius: 3rem;
+    font-size: 1.5rem;
     text-align: center;
   }
   #header #intro {
@@ -833,9 +1043,22 @@ h1 {
     top: 0px;
     right: unset;
   }
-  #blood-donation-body #blood-section .img-container {
-    max-height: 80vh;
-    width: 95vw;
+  #blood-donation-body #blood-section .paragraph.story div {
+    flex-direction: column;
+  }
+  #blood-donation-body #blood-section .paragraph.story div p {
+    padding: 1rem;
+  }
+  #blood-donation-body #blood-section .paragraph .row {
+    flex-direction: column;
+  }
+  #blood-donation-body #blood-section .paragraph .row p {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  #blood-donation-body #blood-section .row-div {
+    flex-direction: column;
+    margin: 0 0rem 0 0rem;
+    gap: 1rem;
   }
   #blood-donation-body #blood-section .blod-bilde {
     max-width: 90vw;
@@ -844,6 +1067,10 @@ h1 {
   #blood-donation-body #blood-section #blod-pose {
     max-width: 27vw;
   }
+  #blood-donation-body #blood-section #map-section article {
+    width: 60vw;
+    font-size: 0.8rem;
+  }
   #caffeine-body .caffeine-header h1 {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -851,6 +1078,12 @@ h1 {
   }
   #caffeine-body .caffeine-header .paragraph h3 {
     font-size: 0.5rem;
+  }
+  #caffeine-body h3 {
+    font-size: 1.2rem;
+  }
+  #caffeine-body .small-img {
+    width: 70vw;
   }
   #caffeine-body #caffeine-test .quiz-img {
     max-width: 100vw;
@@ -867,7 +1100,7 @@ h1 {
     background-image: url("../photos/julepynt.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left -400px;
+    background-position: center 0px;
   }
   #colourblindness-body .colourblindness-header #back:hover {
     background-color: rgba(239, 228, 228, 0.877);
@@ -893,6 +1126,25 @@ h1 {
   #blood-donation-body #blood-section .img-container {
     height: 50vh;
     width: 90vw;
+  }
+  #blood-donation-body #blood-section #blodtyper {
+    width: 85vw;
+    height: auto;
+  }
+  #colourblindness-body #main-section .slider-section {
+    height: fit-content;
+  }
+  #colourblindness-body #main-section .slider-section h3 {
+    padding: 1rem;
+  }
+  #colourblindness-body #main-section .carousel {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #colourblindness-body #main-section .carousel img {
+    height: 70vh;
   }
 }
 

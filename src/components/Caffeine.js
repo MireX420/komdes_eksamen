@@ -9,6 +9,12 @@ import pepsiMax from "../photos/pepsiMax.jpg"
 import energidrikk from "../photos/energidrikkMonster.jpg"
 import energidrikkHylle from "../photos/energidrikkHylle.jpg"
 import FadeInSection from "./FadeInSection";
+import redbull from "../photos/redbull.jpg"
+import beans from "../photos/beans.jpg"
+import koffeinMengde from "../photos/koffeinMengde.png"
+import omsetningEnergidrikk from "../photos/omsetningEnergidrikk.png"
+import drikkeDroper from "../photos/drikkeDroper.jpg"
+
 
 export default function Caffeine(){
 
@@ -29,7 +35,7 @@ export default function Caffeine(){
     svaralternativer: ["55mg", "120mg", "95mg"],
     besvarelse: "wrong"
   },{
-    navn: "Cola",
+    navn: "Pepsi max",
     mengde: "330 ml",
     koffein: "33mg",
     svaralternativer: ["33mg", "10mg", "52mg"],
@@ -47,7 +53,7 @@ export default function Caffeine(){
     svaralternativer: ["32mg", "0mg", "60mg"],
     besvarelse: "no answer"
   },{
-    navn: "Pepsi max",
+    navn: "Cola",
     mengde: "5dl", 
     koffein: "50mg",
     svaralternativer: ["50mg", "80mg", "60mg"],
@@ -86,7 +92,7 @@ export default function Caffeine(){
     //setToggleVisibility("hidden")
   }
 
-  const quizBilder = [espresso, svartKaffe, cola, svartTe, kakao, pepsiMax, energidrikk]
+  const quizBilder = [espresso, svartKaffe, pepsiMax, svartTe, kakao, cola, energidrikk]
 
   const innledning = "Den norske befolkningen får i seg mer koffein nå enn noen gang før. De fleste tenker kanskje at de har oversikt over sitt eget koffeinforbruk, men er du egentlig klar over hvor mange varer som faktisk inneholder koffein?"
   const fhiUrl1 = "https://www.fhi.no/le/kosthold/koffein-koffeinholdige-drikker/#hvor-mye-koffein-fr-vi-i-oss-daglig"
@@ -115,17 +121,18 @@ export default function Caffeine(){
       </FadeInSection>
       <section>
       </section>
-      {/* <img className="bg-img" src={energidrikkHylle} alt="Hylle med energidrikk"/> */}
-      <FadeInSection>
-      <section className="paragraph">
-        <h3>Hvor mye selges?</h3>
-        <p>
-        Ifølge statistikk fra <a href={bryggeriUrl} target="_blank" rel="noreferrer">Bryggeriforeningen</a> har det i 2019 
-        vært omsatt for 41 millioner liter energidrikk i Norge, og det har bare økt. For i 2022 er omsetningen på hele 73 
-        millioner liter energidrikk. Det er en total økning på 32 millioner liter på 3 år, og det er ikke en positiv økning.
-        </p>
-      </section>
-      </FadeInSection>
+      <div className="txt-img">
+        <section className="paragraph">
+          <h3>Hvor mye selges?</h3>
+          <p>
+          Ifølge statistikk fra <a href={bryggeriUrl} target="_blank" rel="noreferrer">Bryggeriforeningen</a> har det i 2019 
+          vært omsatt for 41 millioner liter energidrikk i Norge, og det har bare økt. For i 2022 er omsetningen på hele 73 
+          millioner liter energidrikk. Det er en total økning på 32 millioner liter på 3 år, og det er ikke en positiv økning.
+          </p>
+          <img className="pg-img" src={omsetningEnergidrikk} alt="Statistikk"/>
+        </section>
+        <img className="bg-img" src={redbull} alt="Redbull"/>
+      </div>
       <FadeInSection>
       <section className="paragraph">
         <h3>Energidrikkens påvirkning på kroppen</h3>
@@ -146,17 +153,18 @@ export default function Caffeine(){
         </p>
       </section>
       </FadeInSection>
-      <FadeInSection>
-      <section className="paragraph">
-        <h3>Visste du også at disse varene inneholder koffein?</h3>
-        <p>
-        Selv om man velger å kutte ned på energidrikk, kutter man ikke nødvendigvis ut all koffein. Det er flere drikkevarer enn 
-        man kanskje er klar over som inneholder koffein. Den mest kjente i tillegg til energidrikk er kaffe, men ifølge 
-        bloggen <a href={fgpUrl} target="_blank" rel="noreferrer">Feelgoodpal</a> inneholder produkter som cola, grønn te, kakao 
-        og pepsi max også en del koffein. Til og med koffeinfri kaffe inneholder litt koffein.
-        </p>
-      </section>
-      </FadeInSection>
+      <div className="txt-img">
+        <section className="paragraph">
+          <h3>Visste du også at disse varene inneholder koffein?</h3>
+          <p>
+          Selv om man velger å kutte ned på energidrikk, kutter man ikke nødvendigvis ut all koffein. Det er flere drikkevarer enn 
+          man kanskje er klar over som inneholder koffein. Den mest kjente i tillegg til energidrikk er kaffe, men ifølge 
+          bloggen <a href={fgpUrl} target="_blank" rel="noreferrer">Feelgoodpal</a> inneholder produkter som cola, grønn te, kakao 
+          og pepsi max også en del koffein. Til og med koffeinfri kaffe inneholder litt koffein.
+          </p>
+        </section>
+        <img className="bg-img" src={drikkeDroper} alt="Kaffebønner"/>
+      </div>
     <section id="caffeine-test">
       <h3>Test deg på hvor mye koffein ulike produkter inneholder</h3>
     {drikker.map((drikke, index) => (
@@ -175,14 +183,18 @@ export default function Caffeine(){
       </>
     ))}
     </section>
-    <FadeInSection>
+    <h3>Koffeinmengder i ulike produkter</h3>
+    <img className="small-img" src={koffeinMengde} alt="Mengder av koffein i ulike drikker"/>
+    <div className="txt-img">
     <section className="paragraph">
       <p>
-      Et høyt koffeininntak har positive effekter for flere, men også mange negative på kroppen. Og selv om man ikke drikker 
-      mye energidrikker eller kaffe, kan man likevel få i seg koffein fra diverse andre produkter.
+      Et høyt koffeininntak har positive effekter for flere, men også mange negative på kroppen. Selv om man ikke drikker mye energidrikker 
+      eller kaffe, kan man likevel få i seg koffein fra diverse andre produkter. Derfor er det alltid viktig å lese godt på pakningene og 
+      være obs at koffeininntaket kan ha negative konsekvenser for helsa. 
       </p>
     </section>
-    </FadeInSection>
+    <img className="bg-img" src={beans} alt="Kaffebønner"/>
+    </div>
     </section>
     </body>
   )
