@@ -169,7 +169,7 @@ const sykehusIkon = new L.Icon({
           “Det var sprøtt å se mørk rød væske i posen og tenke at det kommer fra armen min”, sier Stine som er ny 
           blodgiver hos blodbanken i Fredrikstad.
           </p>
-          <img className="small-img" src={stine} alt="Bilde av Stine"></img>
+          <img className="small-img shadow" src={stine} alt="Bilde av Stine"></img>
         </div>
         <p>
         “I mai registrerte jeg meg som blodgiver og hørte ikke noe på en stund. Jeg hadde helt ærlig glemt at jeg 
@@ -235,7 +235,7 @@ const sykehusIkon = new L.Icon({
         Kristine Iversen er bioingeniør hos Blodbanken i Fredrikstad, og hun forteller at blodet fraktes til sykehuset i Østfold 
         to ganger om dagen og dette skjer ved bruk av sykehusets egne biler for frakting av blodet. 
         </p>
-        <img className="small-img" src={kristine} alt="Bilde av Kritine"></img>
+        <img className="small-img shadow" src={kristine} alt="Bilde av Kristine"></img>
         </div>
         <p>
         Blodbanken sender også blod 
@@ -246,7 +246,7 @@ const sykehusIkon = new L.Icon({
       </section>
         <img className="blod-bilde" src={blod2} alt="illustrasjon av blodoverføring"/>
       <section className="paragraph">
-        <video width="320" height="240" autoplay="true" loop>
+        <video width="320" height="240" autoPlay="true" loop>
           <source src={blodbilVid} type="video/mp4" />
           {/* <source src="movie.ogg" type="video/ogg" /> */}
         Your browser does not support the video tag.

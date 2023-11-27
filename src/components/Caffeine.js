@@ -185,7 +185,7 @@ export default function Caffeine(){
     </section>
     <h3>Koffeinmengder i ulike produkter</h3>
     <img className="small-img" src={koffeinMengde} alt="Mengder av koffein i ulike drikker"/>
-    <div className="txt-img">
+    <div className="txt-img end">
     <section className="paragraph">
       <p>
       Et høyt koffeininntak har positive effekter for flere, men også mange negative på kroppen. Selv om man ikke drikker mye energidrikker 

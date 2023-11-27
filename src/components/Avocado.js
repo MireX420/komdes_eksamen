@@ -85,11 +85,6 @@ export default function Avocado(){
           </FadeInSection>
         </div>
         <section id="sticky-images">
-          {/* {avoSaker.map((sak, i) => (
-            <FadeInSection key={`fade-section-${i}`}>
-            <img src={sak} alt={i < 4 ? "positiv avokadosak" : "negativ avokadosak"}/>
-            </FadeInSection>
-          ))} */}
             <ArticleTitle description="Leger: - Derfor skal du spise mer avokado" title="Superfrukten du bør spise hver dag" intro="Glad i guacamole? Fortsett med det! Avokadoen er nærmest for en superfrukt å regne, viser ny forskning." articleClass="light"/>
             <ArticleTitle title="Grønn, feit og sunn" intro="Hva er poenget med avokado? Jeg tror jeg kan ha funnet svaret." articleClass="light"/>
             <ArticleTitle title="Avokado med nytt skall: Dobbel holdbarhet" intro="Denne uka lanseres avokadoer med mye lenger holdbarhet, takket være et nytt belegg" articleClass="light"/>

@@ -8,6 +8,7 @@ import Carousel from "./Carousel";
 import juletreFarger from "../photos/juletreFarger.png"
 import juletreSvartHvitt from "../photos/juletreSvartHvit.png"
 import juletreTopp from "../photos/juletreTopp.png"
+import juletreMidten from "../photos/juletreMidten.png"
 import juletreBunn from "../photos/juletreBunn.png"
 import carousel1 from "../photos/carousel1.png"
 import carousel2 from "../photos/carousel2.png"
@@ -38,7 +39,7 @@ export default function Colourblindness(){
         betegnelser for å oppfatte farger på en annen måte enn det som er vanlig, 
         forklarer <a href={lommelegenUrl} target="_blank" rel="noreferrer">lommelegen</a>.
         </p>
-        <video width="320" height="240" autoplay="true" loop>
+        <video width="320" height="240" autoPlay="true" loop>
           <source src={eyeVid} type="video/mp4" />
           {/* <source src="movie.ogg" type="video/ogg" /> */}
         Your browser does not support the video tag.
@@ -102,11 +103,10 @@ export default function Colourblindness(){
         å skille fra blå toner. De kan klare å vite hva som er rødt og grønt, men det er nok ikke det samme som det de fleste tenker som normalt rødt.
         </p>
       </section>
-      <img className="bg-img" src={juletreTopp} alt="Juletre"/>
+      <img className="bg-img" src={juletreMidten} alt="Juletre"/>
       </div>
       <div className="txt-img">
       <section className="paragraph">
-        <h3>Avslutning</h3>
         <p>
           Rundt oss er det mange mennesker som er fargesvake, både kvinner og menn. Når julen nærmer seg og kanskje de rundt deg 
           ikke er like begeistret som deg, så er det greit å ha i bakhodet at det kan hende de rett og slett er fargesvake. Hvis 
