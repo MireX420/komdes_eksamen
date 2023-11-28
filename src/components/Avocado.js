@@ -11,7 +11,7 @@ import taco from "../photos/taco.jpg"
 
 export default function Avocado(){
 
-  const innledning = "De siste tiårene har avokadoens popularitet skutt i været. Populariteten har ført til et hopp i pris på frukten, og for avokadobøndene gir dette en stor gevinst. Bak kulissene til avokadofeberen skjuler det seg en kriminell fortelling som kaster skygger over en bransje som er alt annet enn grønn."
+  const innledning = "De siste tiårene har avokadoens popularitet skutt i været og for avokadoprodusentene gir dette en stor gevinst. Bak kulissene til avokado feberen skjuler det seg en kriminell fortelling som kaster skygger over en bransje som er alt annet enn grønn."
 
   const klimamyterUrl = "https://klimamyter.no/myter/bedre-for-klimaet-med-kortreist-ku-enn-langreist-avokado"
   const aftenpostenUrl = "https://www.aftenposteninnsikt.no/klimamilj/tr-bbel-det-gr-nne-gullet"

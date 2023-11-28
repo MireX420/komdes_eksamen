@@ -27,7 +27,7 @@ export default function Navpage() {
               <p className="bubble">Kart</p>
               <p className="bubble">Statistikk</p>
             </div>
-            <p>Blod er et helt nødvendig element for alle mennesker og flere trenger påfyll av blod. Dette er det vi har blodgivning for, slik at alle som trenger ekstra blod skal kunne få det. Men vet vi hvor blodet egentlig blir av etter blodgivningen? Hvordan er reisen fra blodgivning til en at pasient som trenger det får det? </p>
+            <p>Blod er et helt nødvendig element for alle mennesker og flere trenger påfyll av blod for å overleve. Det er derfor vi har blodgivning, slik at alle som trenger ekstra blod skal få det. Men vet vi hvor blodet egentlig blir av etter blodgivningen?  </p>
           </section>
         </article>
       </Link >
@@ -72,7 +72,7 @@ export default function Navpage() {
             <p className="bubble">Tidslinje</p>
             <p className="bubble">Kart</p>
             </div>
-            <p>De siste tiårene har avokadoens popularitet skutt i været. Populariteten har ført til et hopp i pris på frukten, og for avokado bøndene gir dette en stor gevinst. Bak kulissene til avokado feberen skjuler det seg en kriminell fortelling som kaster skygger over en bransje som er alt annet enn grønn.</p>
+            <p>De siste tiårene har avokadoens popularitet skutt i været og for avokadoprodusentene gir dette en stor gevinst. Bak kulissene til avokado feberen skjuler det seg en kriminell fortelling som kaster skygger over en bransje som er alt annet enn grønn.</p>
           </section>
         </article>
       </Link>

@@ -45,7 +45,7 @@ export default function BloodDonation(){
       vocabVisibility === "hidden" ? setVocabVisibility("visible") : setVocabVisibility("hidden")
     }
 
-  const innledning = "Blod er et helt nødvendig element for alle mennesker og flere trenger påfyll av blod. Dette er det vi har blodgivning for, slik at alle som trenger ekstra blod skal kunne få det. Men vet vi hvor blodet egentlig blir av etter blodgivningen?"
+  const innledning = "Blod er et helt nødvendig element for alle mennesker og flere trenger påfyll av blod for å overleve. Det er derfor vi har blodgivning, slik at alle som trenger ekstra blod skal få det. Men vet vi hvor blodet egentlig blir av etter blodgivningen?"
 
 
   const rodekorsUrl1 = "https://www.rodekors.no/gi-blod/informasjon/hvem-kan-ikke-gi-blod/"
