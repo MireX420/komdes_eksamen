@@ -174,12 +174,18 @@ const sykehusIkon = new L.Icon({
         <p>
         “I mai registrerte jeg meg som blodgiver og hørte ikke noe på en stund. Jeg hadde helt ærlig glemt at jeg 
         hadde registrert meg før jeg ble ringt i september og spurt om å komme til blodbanken for å teste blodet 
-        mitt. Da jeg kom til blodbanken måtte jeg fylle ut et digitalt skjema med rundt 50 spørsmål, blant annet 
+        mitt."
+        </p>
+        <p>
+        "Da jeg kom til blodbanken måtte jeg fylle ut et digitalt skjema med rundt 50 spørsmål, blant annet 
         om jeg var frisk, mellom 18-65 år, ikke gravid, veier over 50 kg og om jeg hadde vært i utlandet de siste 
         månedene, osv. Etter å ha fylt ut skjemaet foregikk et kort intervju med en hyggelig dame. Hun dobbeltsjekket 
-        noen punkter på spørreskjemaet og forklarte hva vi skulle gjøre i dag. I dag skulle de ta en prøve av blodet 
+        noen punkter på spørreskjemaet og forklarte hva vi skulle gjøre i dag."
+        </p>
+        <p>
+        "I dag skulle de ta en prøve av blodet 
         mitt for å teste det og se om jeg kunne bli blodgiver. Det hele gikk raskt og smertefritt, og de tok ca 10 ml 
-        blod for testing.”
+        blod for testing."
         </p>
       </section>
       <section className="paragraph gap">
@@ -194,7 +200,10 @@ const sykehusIkon = new L.Icon({
         “Jeg ble oppringt tre uker senere for innkalling til min første blodgivning. Jeg leste godt gjennom arket jeg hadde 
         fått med meg hjem sist der det står informasjon om alt man trenger å vite før, under og etter blodgivning. Man skal 
         møte opp frisk, mett og opplagt. Om man ikke er i form den dagen så skal man ikke gi blod. Man skal også ta resten 
-        av dagen etter blodgivningen med ro og drikke masse vann. Jeg møtte opp på blodbanken og fylte inn det digitale 
+        av dagen etter blodgivningen med ro og drikke masse vann."
+        </p>
+        <p>
+        "Jeg møtte opp på blodbanken og fylte inn det digitale 
         skjemaet igjen, det er visst noe man må gjøre hver gang man skal gi blod. Etter en kort prat om spørreskjemaet 
         med den hyggelige damen, fikk jeg velge meg ut en premie. Det var et utvalg av forskjellige krydder, kjøkkenredskaper
         og diverse andre ting.”

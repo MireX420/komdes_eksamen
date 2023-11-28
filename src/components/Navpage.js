@@ -21,7 +21,7 @@ export default function Navpage() {
           <section className="text-section">
             <h3>Langlesningssak</h3>
             <h2>Hvor blir det av blodet ditt?</h2>
-            <div id="tags">
+            <div className="tags">
               <p className="bubble">Visualisering</p>
               <p className="bubble">Animasjon</p>
               <p className="bubble">Kart</p>
@@ -38,7 +38,7 @@ export default function Navpage() {
           <section className="text-section">
             <h3>Nyhetssak 1</h3>
             <h2>Dette skjuler seg i det du drikker</h2>
-            <div id="tags">
+            <div className="tags">
               <p className="bubble">Statistikk</p>
               <p className="bubble">Quiz</p>
             </div>
@@ -53,7 +53,7 @@ export default function Navpage() {
           <section className="text-section">
             <h3>Nyhetssak 2</h3>
             <h2>En fargesvak jul</h2>
-            <div id="tags">
+            <div className="tags">
             <p className="bubble">Fargetest</p>
             <p className="bubble">Visualisering</p>
             </div>
@@ -68,7 +68,7 @@ export default function Navpage() {
           <section className="text-section">
             <h3>Nyhetssak 3</h3>
             <h2>Den mørke baksiden til tacokveldens grønne gull</h2>
-            <div id="tags">
+            <div className="tags">
             <p className="bubble">Tidslinje</p>
             <p className="bubble">Kart</p>
             </div>

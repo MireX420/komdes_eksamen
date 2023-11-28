@@ -37,7 +37,7 @@ a {
     text-align: center;
   }
   
-  #tags {
+  .tags {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -81,7 +81,7 @@ a {
       box-shadow: 0px 0px 10px rgb(184, 184, 184);
       overflow: hidden;
 
-      #tags{
+      .tags{
         display: flex;
         flex-wrap: wrap;
 
@@ -333,7 +333,7 @@ a {
       } 
 
       :nth-child(7){
-        top: 400px;
+        top: 300px;
         margin-top: 300px;
         margin-left: 5vw;
       } 
@@ -369,6 +369,7 @@ a {
   flex-direction: column;
   align-items: center;
   padding-bottom: 20vh;
+  text-align: center;
 
   h1{
     color: rgb(0, 0, 0);
@@ -387,7 +388,7 @@ a {
     border: none;
     padding: 0.7rem;
     border-radius: 50%;
-    z-index: 1;
+    z-index: 200;
     width: 70px;
 
     &:hover {
@@ -434,17 +435,10 @@ h1 {
   height: fit-content;
 }
 
-// .story-img{
-//   max-width: 50vw;
-//   width: 100%;
-//   height: auto;
-// }
-
 #blood-donation-body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  //background-color: rgb(251, 208, 215);
   background-color: rgb(255, 238, 241);
 
   &:last-child{
@@ -654,7 +648,7 @@ h1 {
 
       #stats{
         max-width: 85vw;
-        width: 500px;
+        width: 100%;
         align-self: center;
         box-shadow: 0px 0px 20px rgba(66, 19, 19, 0.595);
       }
@@ -773,7 +767,7 @@ h1 {
         .pg-img{
           border: 2px solid #1d1d1d;
           border-radius: 10px;
-          width: 80%;
+          width: 95%;
         }
       }
     }
@@ -1039,8 +1033,8 @@ h1 {
           top: 0;
           bottom: 0;
           margin: auto 10px;
-          height: 25px;
-          width: 25px;
+          height: 40px;
+          width: 40px;
 
           &:hover{
             background-color: rgba(255, 255, 255, 0.651);
@@ -1484,6 +1478,47 @@ h1 {
 }
 
 @media (max-width: 500px) {
+#navpage{
+  text-align: center;
+
+  h1{
+    font-size: 1.2rem;
+  }
+
+  h2{
+    font-size: 1rem;
+  }
+
+  #article-section{
+    .article-card{
+     width: 95vw;
+     .text-section{
+       h3{
+         font-size: 1rem;
+       }
+ 
+       h2{
+         font-size: 1.2rem;
+       }
+ 
+       p{
+         font-size: 0.9rem;
+       }
+
+       .tags{
+        font-size: 0.9rem;
+       }
+     }
+    }
+   }
+}
+
+  #header{
+    p{
+      font-size: 0.9rem;
+    }
+  }
+
   #blood-donation-body{
     #blood-section{
       .img-container{
@@ -1492,14 +1527,31 @@ h1 {
       }
 
       #blodtyper{
-        width: 85vw;
+        width: 70vw;
         height: auto;
+      }
+      .paragraph{
+        font-size: 0.9rem;
+        max-width: 95vw;
+
+        .medium-img{
+          width: 70vw;
+      }
       }
     }
   }
   
   #colourblindness-body{
   #main-section{
+    video{
+      width: 100%;
+    }
+
+    .paragraph{
+      font-size: 0.9rem;
+      max-width: 95vw;
+    }
+
     .slider-section{
       height: fit-content;
 
@@ -1517,6 +1569,35 @@ h1 {
       img{
         height: 70vh;
       }
+      }
+    }
+  }
+
+  #avocado-body{
+    #main-section{
+      .story-img{
+        width: 98vw;
+      }
+
+      #sticky-images {
+        &#sticky-images * {
+          width: 65vw;
+        }
+      }
+    }
+  }
+
+  #caffeine-body{
+    #main-section{
+      .paragraph{
+        font-size: 0.9rem;
+        max-width: 90vw;
+      }
+
+      #caffeine-test{
+        .row-div{
+          gap: 1rem;
+        }
       }
     }
   }
