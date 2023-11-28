@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Header from "./Header";
+import FadeInSection from "./FadeInSection";
+
 import espresso from "../photos/espresso.jpg"
 import svartKaffe from "../photos/svartKaffe.png"
 import cola from "../photos/cola.jpg"
@@ -7,20 +9,15 @@ import svartTe from "../photos/svartTe.jpg"
 import kakao from "../photos/kakao.jpg"
 import pepsiMax from "../photos/pepsiMax.jpg"
 import energidrikk from "../photos/energidrikkMonster.jpg"
-import energidrikkHylle from "../photos/energidrikkHylle.jpg"
-import FadeInSection from "./FadeInSection";
 import redbull from "../photos/redbull.jpg"
 import beans from "../photos/beans.jpg"
 import koffeinMengde from "../photos/koffeinMengde.png"
 import omsetningEnergidrikk from "../photos/omsetningEnergidrikk.png"
 import drikkeDroper from "../photos/drikkeDroper.jpg"
 
-
 export default function Caffeine(){
 
   const [showAnswer, setShowAnswer] = useState(["no answer", "no answer", "no answer", "no answer", "no answer", "no answer", "no answer"])
-  //const [showAnswer, setShowAnswer] = useState(false)
-
 
   const drikker = [{
     navn: "Espresso",
@@ -67,29 +64,21 @@ export default function Caffeine(){
   }]
 
   const handleTestAnswer = (e, index) => {
-    //e.preventDefault()
     if(e.currentTarget.value === drikker[index].koffein) {
-      //drikker[index].besvart = "correct"
-      //setResponse(...response, response[index] = "correct")
       drikker[index].besvarelse = "correct"
       console.log("you picked correct!")
       const updatedShowAnswer = [...showAnswer]
       updatedShowAnswer[index] = "correct"
 
       setShowAnswer(updatedShowAnswer)
-      //console.log(response)
     } else {
-      //drikker[index].besvart = "wrong"
-      //setResponse(...response, response[index] = "wrong")
       drikker[index].besvarelse = "wrong"
       console.log("You picked wrong")
       const updatedShowAnswer = [...showAnswer]
       updatedShowAnswer[index] = "wrong"
 
       setShowAnswer(updatedShowAnswer)
-      //console.log(response)
     }
-    //setToggleVisibility("hidden")
   }
 
   const quizBilder = [espresso, svartKaffe, pepsiMax, svartTe, kakao, cola, energidrikk]
@@ -102,7 +91,7 @@ export default function Caffeine(){
   const fgpUrl = "https://feelgoodpal.com/nb/blog/foods-with-caffeine/"
 
   return(
-    <body id="caffeine-body">
+    <section id="caffeine-body">
     <Header bgImg="caffeine-header" innledning={innledning} tittel="Dette skjuler seg i det du drikker"/>
     <section id="main-section">
       <FadeInSection>
@@ -169,16 +158,16 @@ export default function Caffeine(){
       <h3>Test deg på hvor mye koffein ulike produkter inneholder</h3>
     {drikker.map((drikke, index) => (
       <>
-        <p >{drikke.navn} {drikke.mengde}</p>
-        <img className="quiz-img" src={quizBilder[index]} alt={`"${quizBilder[index]}"`}/>
-        <div className="row-div">
+        <p key={`p-${index}`}>{drikke.navn} {drikke.mengde}</p>
+        <img key={`img-${index}`} className="quiz-img" src={quizBilder[index]} alt={`"${quizBilder[index]}"`}/>
+        <div key={`div-${index}`} className="row-div">
         {drikke.svaralternativer.map((svar) => (
         <>
-        {showAnswer[index] === "no answer" && (<button className="choice" value={svar} onClick={(e) => handleTestAnswer(e, index)}>{svar}</button>) }
+        {showAnswer[index] === "no answer" && (<button key={`btn-${index}`} className="choice" value={svar} onClick={(e) => handleTestAnswer(e, index)}>{svar}</button>) }
         </>
         ))}
-        {showAnswer[index] === "wrong" && (<p className="answer">Feil svar! {drikke.mengde} {drikke.navn} inneholder {drikke.koffein} koffein</p>)}
-        {showAnswer[index] === "correct" && (<p className="answer">Riktig! {drikke.mengde} {drikke.navn} inneholder {drikke.koffein} koffein</p>)}
+        {showAnswer[index] === "wrong" && (<p key={`wrong-answer-${index}`} className="answer">Feil svar! {drikke.mengde} {drikke.navn} inneholder {drikke.koffein} koffein</p>)}
+        {showAnswer[index] === "correct" && (<p key={`correct-answer-${index}`} className="answer">Riktig! {drikke.mengde} {drikke.navn} inneholder {drikke.koffein} koffein</p>)}
         </div>
       </>
     ))}
@@ -196,6 +185,6 @@ export default function Caffeine(){
     <img className="bg-img" src={beans} alt="Kaffebønner"/>
     </div>
     </section>
-    </body>
+    </section>
   )
 }

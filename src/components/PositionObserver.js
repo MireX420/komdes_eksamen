@@ -27,6 +27,4 @@ export default function PositionObserver(props){
       {props.children}
     </div>
   );
-
-  
 }

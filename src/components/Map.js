@@ -2,13 +2,11 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import React, {useState} from "react";
 import "leaflet/dist/leaflet.css";
 import L from 'leaflet';
+
 import blodBankSkilt from '../photos/blodbank-skilt.png';
 import sykehusSkilt from '../photos/sykehusOstfold-skilt.png';
 
-
-export default function Map(bbFredrikstad, startPosition, kalnes, position, flyTo, mapRef){
-
-
+export default function Map(bbFredrikstad, startPosition, kalnes, bbHalden, bbSarpsborg, bbMoss, bbAskim, flyTo, mapRef){
 
   const [zoomLevel, setZoomLevel] = useState(10);
 

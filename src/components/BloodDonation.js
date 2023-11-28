@@ -1,5 +1,10 @@
 import { useRef, useState } from "react";
+import "leaflet/dist/leaflet.css";
+import L from 'leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+
 import Header from "./Header";
+
 import blodtyper from "../photos/blodtyper.png"
 import blod1 from "../photos/blod1.png"
 import blod2 from "../photos/blod2.png"
@@ -9,19 +14,14 @@ import blod5 from "../photos/blod5.png"
 import blod6 from "../photos/blod6.png"
 import blod7 from "../photos/blod7.png"
 import blod8 from "../photos/blod8.png"
-//import hjul from "../photos/blodbil-hjul.png"
 import FadeInSection from "./FadeInSection";
 import PositionObserver from "./PositionObserver";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import "leaflet/dist/leaflet.css";
-import L from 'leaflet';
 import blodBankSkilt from '../photos/blodbank-skilt.png';
 import sykehusSkilt from '../photos/sykehusOstfold-skilt.png';
 import blodbanken from '../photos/blodbanken.png';
 import sykehuset from '../photos/sykehuset.jpg';
 import blodbilVid from '../photos/blodbil-video.mp4';
 import blodgivereStats from '../photos/blodgivere-stats.png';
-import needle from '../photos/needle.jpg';
 import stine from "../photos/stine.png"
 import kristine from "../photos/kristine.png"
 import kristine2 from "../photos/kristine2.png"
@@ -91,7 +91,7 @@ const sykehusIkon = new L.Icon({
   }
 
   return(
-    <body id="blood-donation-body">
+    <section id="blood-donation-body">
     <Header innledning={innledning} tittel="Hvor blir det av blodet ditt?" bgImg="blood-donation-header"/>
     <button id="vocab-btn" onClick={() => toggleVisibility()}>Begrep</button>
     <aside id="vocab" className={vocabVisibility}>
@@ -403,6 +403,6 @@ const sykehusIkon = new L.Icon({
       </section>
       <div id="rotating-div"></div>
     </section>
-    </body>
+    </section>
   )
 }

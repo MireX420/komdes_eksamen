@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import blodceller from "../photos/blodceller.jpg"
 import avo from "../photos/avo.jpg"
 import julekule from "../photos/julekule.jpg"
@@ -7,10 +8,11 @@ import kaffe from "../photos/kaffe.jpg"
 export default function Navpage() {
   
   return(
-    <body id="navpage">
+    <section id="navpage">
     <h1>Eksamen i kommunikasjonsdesign høst 2023</h1>
-    <p id="welcome" className="bubble" >Velkommen hit! Her finner du fire spennende visuelle artikler satt sammen med kjærlighet </p>
-    {/* <p className="bubble">bla bla bla bla...</p> */}
+    <h2>Kandidatnummer: 415, 454 og 435</h2>
+    <p id="welcome" className="bubble" >Velkommen hit! Her finner du fire spennende visuelle artikler satt sammen med kjærlighet. 
+    Skrevet, designet og utviklet av Jennifer Grimsrud, Stine Vågnes og Synne Heiberg.</p>
     <section id="article-section">
 
       <Link to="/blood-donation">
@@ -76,6 +78,6 @@ export default function Navpage() {
       </Link>
     </section>
 
-    </body>
+    </section>
   )
 }

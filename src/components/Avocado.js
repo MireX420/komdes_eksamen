@@ -1,30 +1,17 @@
 import Header from "./Header";
-import pAvoSak1 from "../photos/avosak_positiv/pSak1.png"
-import pAvoSak2 from "../photos/avosak_positiv/pSak2.png"
-import pAvoSak3 from "../photos/avosak_positiv/pSak3.png"
-import pAvoSak4 from "../photos/avosak_positiv/pSak4.png"
-import nAvoSak1 from "../photos/avosak_negativ/nSak1.png"
-import nAvoSak2 from "../photos/avosak_negativ/nSak2.png"
-import nAvoSak3 from "../photos/avosak_negativ/nSak3.png"
-import nAvoSak4 from "../photos/avosak_negativ/nSak4.png"
+import FadeInSection from "./FadeInSection";
+import ArticleTitle from "./ArticleTitle";
+
 import mexicoKart from "../photos/mexico-kart.png"
 import avoStore2pk from "../photos/avoStore2pk.png"
 import avoSign from "../photos/avokado-skilt.png"
 import avoStore from "../photos/avoStore.png"
 import avoTre from "../photos/avokadotre.jpg"
 import taco from "../photos/taco.jpg"
-import { useEffect, useRef, useState } from "react";
-import FadeInSection from "./FadeInSection";
-import ArticleTitle from "./ArticleTitle";
-
 
 export default function Avocado(){
 
-  //const [opacityChange, setOpacityChange] = useState()
-
   const innledning = "De siste tiårene har avokadoens popularitet skutt i været. Populariteten har ført til et hopp i pris på frukten, og for avokadobøndene gir dette en stor gevinst. Bak kulissene til avokadofeberen skjuler det seg en kriminell fortelling som kaster skygger over en bransje som er alt annet enn grønn."
-
-  const avoSaker = [pAvoSak1, pAvoSak2, pAvoSak3, pAvoSak4, nAvoSak1, nAvoSak2, nAvoSak3, nAvoSak4]
 
   const klimamyterUrl = "https://klimamyter.no/myter/bedre-for-klimaet-med-kortreist-ku-enn-langreist-avokado"
   const aftenpostenUrl = "https://www.aftenposteninnsikt.no/klimamilj/tr-bbel-det-gr-nne-gullet"
@@ -35,7 +22,7 @@ export default function Avocado(){
   const ntbUrl = "https://kommunikasjon.ntb.no/pressemelding/17905039/taco-bestar-som-kosemat-i-helgene?publisherId=89251"
 
   return(
-    <body id="avocado-body">
+    <section id="avocado-body">
       <Header bgImg="avo-header" innledning={innledning} tittel="Den mørke baksiden til tacokveldens grønne gull" undertittel="Det grønne gullet"/>
       <section id="main-section">
         <div id="timeline"></div>
@@ -162,6 +149,6 @@ export default function Avocado(){
             </p>
           </section>
       </section>
-    </body>
+    </section>
   )
 }

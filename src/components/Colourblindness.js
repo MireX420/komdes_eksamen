@@ -1,10 +1,10 @@
 import Header from "./Header";
+import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
+import Carousel from "./Carousel";
+
+import eyeVid from "../photos/oyevideo.mp4"
 import xx from "../photos/XX-dame.png"
 import xy from "../photos/XY-mann.png"
-import juletre from "../photos/juletre.jpg"
-import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
-import eyeVid from "../photos/oyevideo.mp4"
-import Carousel from "./Carousel";
 import juletreFarger from "../photos/juletreFarger.png"
 import juletreSvartHvitt from "../photos/juletreSvartHvit.png"
 import juletreTopp from "../photos/juletreTopp.png"
@@ -27,7 +27,7 @@ export default function Colourblindness(){
   const images = [carousel1, carousel2, carousel3, carousel4]
 
   return(
-    <body id="colourblindness-body">
+    <section id="colourblindness-body">
     <Header innledning={innledning} tittel="En fargesvak jul" bgImg="colourblindness-header"/>
     <section id="main-section">
       <section className="window-section">
@@ -41,7 +41,6 @@ export default function Colourblindness(){
         </p>
         <video width="320" height="240" autoPlay="true" loop>
           <source src={eyeVid} type="video/mp4" />
-          {/* <source src="movie.ogg" type="video/ogg" /> */}
         Your browser does not support the video tag.
         </video> 
         <p>
@@ -112,11 +111,11 @@ export default function Colourblindness(){
           ikke er like begeistret som deg, så er det greit å ha i bakhodet at det kan hende de rett og slett er fargesvake. Hvis 
           bildene i denne artikkelen så ut som vi beskrev dem, ta denne testen for å sjekke om du er fargesvak:
         </p>
-        <p><a href="https://no.colorlitelens.com/fargesynstest.html" alt="Fargesynstest">Fargesynstest</a></p>
+        <p><a href="https://no.colorlitelens.com/fargesynstest.html" target="_blank" rel="noreferrer">Fargesynstest</a></p>
       </section>
       <img className="bg-img" src={juletreBunn} alt="Juletre"/>
       </div>
     </section>
-    </body>
+    </section>
   )
 }
